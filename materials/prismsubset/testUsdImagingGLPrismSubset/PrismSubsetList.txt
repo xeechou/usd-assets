@@ -1,0 +1,48 @@
+
+Opaque
+Prism-119, Prism-253, Prism-105, Prism-132, Prism-414, Prism-247, Prism-399, Prism-360, Prism-397
+	Plastic - Glossy (Grey)	Prism-119
+	Plastic - Textured - Polka	Prism-253
+	Powder Coat - Rough (Blue)	Prism-105
+	Rubber - Weathered	Prism-132
+	A Type Bulb - Frosted - 800lm	Prism-414
+	Cherry - Glossy	Prism-247
+	Display - 7 Segments - LCD (Cyan)	Prism-399
+	Leather - Perforated (Yellow)	Prism-360
+	Marble (Translucent)	Prism-397
+
+Transparent
+Prism-152, Prism-171, Prism-159, Prism-207, Prism-198
+	Glass (Clear)	Prism-152
+	Polycarbonate (Bronze)	Prism-171
+	Glass - Clouds	Prism-159
+	Glass - Frosted Medium	Prism-207
+	Water - Calm Sea	Prism-198
+	
+Metal
+Prism-042, Prism-334, Prism-066, Prism-026, Prism-227, Prism-048
+	Brass - Polished	Prism-042
+	Brass - Old	Prism-334
+	Stainless Diamond Plate - Tread Brite	Prism-066
+	Aluminum - Knurled	Prism-026
+	Steel Mesh - Wire Small	Prism-227
+	Copper - Brushed Radial	Prism-048
+
+Layered
+Prism-005, Prism-002, Prism-013, Prism-134
+	Paint - Metallic (Green)	Prism-005
+	Carbon Fiber - Twill	Prism-002
+	Paint - Metal Flake (Red)	Prism-013
+	Granite - Red	Prism-134
+
+Glazing
+Prism-2000, Prism-2004, Prism-2011, Prism-2013, Prism-2016, Prism-2022, Prism-2023
+	Base Material - Glazing	Prism-2023
+	Clear - Single Pane	Prism-2000
+	Blue Green - Single Pane	Prism-2004
+	Bronze - Insulating	Prism-2011
+	Grey - Single Pane - High Reflectivity	Prism-2013
+	Clear - Frosted	Prism-2016
+	Clear - Safety pattern - Curves	Prism-2022
+
+

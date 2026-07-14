@@ -1,0 +1,58 @@
+#usda 1.0
+(
+    upAxis = "Y"
+)
+# Template USD file that loads a shaderball and deletes any material bindings.
+#
+def "TestMaterial" (
+    prepend apiSchemas = ["MaterialBindingAPI"]
+    references = @shaderball.usd@
+)
+{
+    over "Scenes"
+    {
+        over "scene"
+        {
+            over "Preview_Mesh"
+            {
+				over "submesh" (
+					prepend apiSchemas = ["MaterialBindingAPI"]
+				)
+				{
+					#Add new Material binding here
+					#delete rel material:binding:preview = </TestMaterial/Materials/UsdPreviewSurface/Materials/DefaultMaterial>
+				}
+            }
+
+            over "Calibration_Mesh"
+            {
+				over "submesh" (
+					prepend apiSchemas = ["MaterialBindingAPI"]
+				)
+				{
+					# Set a display color for center sphere of shaderball 
+					#color3f[] primvars:displayColor = [(1.0, 1.0, 1.0)]
+					#delete rel material:binding:preview = </TestMaterial/Materials/UsdPreviewSurface/Materials/DefaultMaterial>
+				}
+            }
+        }
+    }
+}
+
+def Xform "lights"
+{
+    def DomeLight "DomeLight"
+    {
+        asset inputs:texture:file = @./StinsonBeach.hdr@
+        float xformOp:rotateX:Zup = 90
+        uniform token[] xformOpOrder = ["xformOp:rotateX:Zup"]
+    }
+}
+
+# Camera is setup for usdtest testUsdImagingGLBasicDrawing
+def Camera "Camera"
+{
+    float3 xformOp:rotateYXZ = (-15, 45, 12)
+    double3 xformOp:translate = (2150, 1460, 2250)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateYXZ"]
+}

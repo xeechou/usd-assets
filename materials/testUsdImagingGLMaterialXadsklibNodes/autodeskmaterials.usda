@@ -1,0 +1,96 @@
+#usda 1.0
+(
+    upAxis = "Z"
+)
+
+def "adskmat0" (
+    references = @texturedSphere.usda@
+)
+{
+    rel material:binding = </MaterialX/Materials/matbaskenwoven>
+    color3f[] primvars:displayColor = [(1.0, 0.0, 0.0)]
+    double radius = 9.0
+    matrix4d xformOp:transform = ( (1, 0, 0, 0),
+                                    (0, 1, 0, 0),
+                                    (0, 0, 1, 0),
+                                    (-10, 0, -10, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+def "adskmat1" (
+    references = @texturedSphere.usda@
+    prepend apiSchemas = ["MaterialBindingAPI"]
+)
+{
+    rel material:binding = </MaterialX/Materials/materialannodizedred>
+    color3f[] primvars:displayColor = [(1.0, 1.0, 1.0)]
+    double radius = 9.0
+    matrix4d xformOp:transform = ( (1, 0, 0, 0),
+                                    (0, 1, 0, 0),
+                                    (0, 0, 1, 0),
+                                    (10, 0, 10, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+
+def "adskmat2" (
+    references = @texturedSphere.usda@
+)
+{
+    rel material:binding = </MaterialX/Materials/materialalumglossyblue>
+    color3f[] primvars:displayColor = [(1.0, 0.0, 0.0)]
+    double radius = 9.0
+    matrix4d xformOp:transform = ( (1, 0, 0, 0),
+                                    (0, 1, 0, 0),
+                                    (0, 0, 1, 0),
+                                    (-10, 0, 10, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+def "adskmat3" (
+    references = @texturedSphere.usda@
+    prepend apiSchemas = ["MaterialBindingAPI"]
+)
+{
+    rel material:binding = </MaterialX/Materials/alumeshslot>
+    color3f[] primvars:displayColor = [(1.0, 1.0, 1.0)]
+    double radius = 9.0
+    matrix4d xformOp:transform = ( (1, 0, 0, 0),
+                                    (0, 1, 0, 0),
+                                    (0, 0, 1, 0),
+                                    (10, 0, -10, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+def Scope "MaterialX"(
+    references = [
+        @./adskMaterial_prism.mtlx@</MaterialX>,
+        @./adskMaterial_protein.mtlx@</MaterialX>,
+        ]
+    )
+{
+}
+
+def Xform "lights" 
+{
+    def DomeLight "DomeLight"
+    {
+        asset inputs:texture:file = @./images/StinsonBeach.hdr@
+        float xformOp:rotateX:Zup = 90
+        uniform token[] xformOpOrder = ["xformOp:rotateX:Zup"]
+    }
+    def SphereLight "Light"
+    {
+        float inputs:radius = 20
+        float inputs:intensity = 5
+        Vec3f xformOp:translate = (0, -50, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+
+def Camera "Camera"
+{
+    double3 xformOp:translate = (0, 0, 200)
+    float xformOp:rotateX:Zup = 90
+    uniform token[] xformOpOrder = ["xformOp:rotateX:Zup","xformOp:translate"]
+}

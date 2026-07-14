@@ -1,0 +1,72 @@
+#usda 1.0
+(
+    defaultPrim = "Scene"
+)
+
+# Catmull-Clark cube cage with the four TOP edges tagged as an infinitely
+# sharp crease loop. Without the crease the cage refines into a rounded blob
+# (see catmark_cube.usda); with it, the top stays a flat square with crisp
+# edges while the lower faces still round off -- a clear, easily verified
+# crease signal for the OpenSubdiv sharpness-tag plumbing.
+def "Materials"
+{
+    def Material "CubeMat"
+    {
+        token outputs:surface.connect = </Materials/CubeMat/Surface.outputs:surface>
+
+        def Shader "Surface"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.2, 0.5, 0.8)
+            float inputs:metallic = 0.0
+            float inputs:roughness = 0.4
+            token outputs:surface
+        }
+    }
+}
+
+def Xform "Scene"
+{
+    def Mesh "Cube"
+    (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+        rel material:binding = </Materials/CubeMat>
+        color3f[] primvars:displayColor = [(0.2, 0.5, 0.8)]
+
+        point3f[] points = [
+            (-0.5, -0.5, -0.5),
+            ( 0.5, -0.5, -0.5),
+            ( 0.5,  0.5, -0.5),
+            (-0.5,  0.5, -0.5),
+            (-0.5, -0.5,  0.5),
+            ( 0.5, -0.5,  0.5),
+            ( 0.5,  0.5,  0.5),
+            (-0.5,  0.5,  0.5)
+        ]
+
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+
+        int[] faceVertexIndices = [
+            0, 3, 2, 1,
+            4, 5, 6, 7,
+            0, 4, 7, 3,
+            1, 2, 6, 5,
+            0, 1, 5, 4,
+            3, 7, 6, 2
+        ]
+
+        uniform token subdivisionScheme = "catmullClark"
+
+        # Closed crease loop around the +Z (top) face: verts 4->5->6->7->4.
+        # One run of 5 vertices == 4 sharp edges; sharpness 10 == infinitely
+        # sharp (OSD clamps the limit surface to interpolate the edge).
+        int[] cornerIndices = []
+        float[] cornerSharpnesses = []
+        int[] creaseIndices = [4, 5, 6, 7, 4]
+        int[] creaseLengths = [5]
+        float[] creaseSharpnesses = [10.0]
+    }
+}

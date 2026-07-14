@@ -1,0 +1,30 @@
+#usda 1.0
+
+(
+    upAxis = "Y"
+    doc = """This layer represents the various geometric forms that curves
+             may be used to represent."""
+)
+
+
+def Xform "Linear" {
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+    float3 xformOp:translate = (0, 9, 0)
+    def Scope "Tubes"{
+        def BasisCurves "ConstantWidth" (){
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+            float3 xformOp:translate = (3, 0, 0)
+
+            uniform token type = "linear"
+            int[] curveVertexCounts = [7]
+            point3f[] points = [(0, 0, 0), (1, 1, 0), (1, 2, 0), (0, 3, 0), (-1, 4, 0), (-1, 5, 0), (0, 6, 0)]
+            float[] widths = [.5] (interpolation = "constant") 
+            color3f[] primvars:displayColor = [(1, 0, 0)]
+        }
+    }
+    def Scope "Ribbons"{
+    }
+}
+
+
+

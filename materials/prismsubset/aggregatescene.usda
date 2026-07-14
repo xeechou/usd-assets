@@ -1,0 +1,620 @@
+#usda 1.0
+(
+    metersPerUnit = 0.01
+    subLayers = [
+        @./Prism_2011.usda@,
+        @./Prism_132.usda@,
+        @./Prism_105.usda@,
+        @./Prism_152.usda@,
+        @./Prism_134.usda@,
+        @./Prism_026.usda@,
+        @./Prism_159.usda@,
+        @./Prism_227.usda@,
+        @./Prism_207.usda@,
+        @./Prism_397.usda@,
+        @./Prism_2000.usda@,
+        @./Prism_2016.usda@,
+        @./Prism_247.usda@,
+        @./Prism_334.usda@,
+        @./Prism_119.usda@,
+        @./Prism_066.usda@,
+        @./Prism_360.usda@,
+        @./Prism_399.usda@,
+        @./Prism_2023.usda@,
+        @./Prism_198.usda@,
+        @./Prism_253.usda@,
+        @./Prism_005.usda@,
+        @./Prism_013.usda@,
+        @./Prism_414.usda@,
+        @./Prism_2022.usda@,
+        @./Prism_048.usda@,
+        @./Prism_002.usda@,
+        @./Prism_2013.usda@,
+        @./Prism_171.usda@,
+        @./Prism_042.usda@,
+        @./Prism_2004.usda@
+    ]
+    upAxis = "Y"
+)
+
+def Xform "objSballRef_BlueGreenSinglePane_0" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, 2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/BlueGreenSinglePane>
+        }
+    }
+}
+
+def Xform "objSballRef_BrassPolished_1" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, 2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/BrassPolished>
+        }
+    }
+}
+
+def Xform "objSballRef_PolycarbonateBronze_2" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, 2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PolycarbonateBronze>
+        }
+    }
+}
+
+def Xform "objSballRef_GreySinglePaneHighReflectivity_3" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, 2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/GreySinglePaneHighReflectivity>
+        }
+    }
+}
+
+def Xform "objSballRef_CarbonFiberTwill_4" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, 2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/CarbonFiberTwill>
+        }
+    }
+}
+
+def Xform "objSballRef_CopperBrushedRadial_5" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, 1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/CopperBrushedRadial>
+        }
+    }
+}
+
+def Xform "objSballRef_ClearSafetypatternCurves_6" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, 1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/ClearSafetypatternCurves>
+        }
+    }
+}
+
+def Xform "objSballRef_ATypeBulbFrosted800lm_7" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, 1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/ATypeBulbFrosted800lm>
+        }
+    }
+}
+
+def Xform "objSballRef_PaintMetalFlakeRed_8" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, 1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PaintMetalFlakeRed>
+        }
+    }
+}
+
+def Xform "objSballRef_PaintMetallicGreen_9" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, 1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PaintMetallicGreen>
+        }
+    }
+}
+
+def Xform "objSballRef_PlasticTexturedPolka_10" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PlasticTexturedPolka>
+        }
+    }
+}
+
+def Xform "objSballRef_WaterCalmSea_11" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/WaterCalmSea>
+        }
+    }
+}
+
+def Xform "objSballRef_BaseMaterialGlazing_12" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/BaseMaterialGlazing>
+        }
+    }
+}
+
+def Xform "objSballRef_Display7SegmentsLCDCyan_13" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/Display7SegmentsLCDCyan>
+        }
+    }
+}
+
+def Xform "objSballRef_LeatherPerforatedYellow_14" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/LeatherPerforatedYellow>
+        }
+    }
+}
+
+def Xform "objSballRef_StainlessDiamondPlateTreadBrite_15" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, -1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/StainlessDiamondPlateTreadBrite>
+        }
+    }
+}
+
+def Xform "objSballRef_PlasticGlossyGrey_16" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, -1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PlasticGlossyGrey>
+        }
+    }
+}
+
+def Xform "objSballRef_BrassOld_17" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, -1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/BrassOld>
+        }
+    }
+}
+
+def Xform "objSballRef_CherryGlossy_18" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, -1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/CherryGlossy>
+        }
+    }
+}
+
+def Xform "objSballRef_ClearFrosted_19" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, -1000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/ClearFrosted>
+        }
+    }
+}
+
+def Xform "objSballRef_ClearSinglePane_20" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, -2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/ClearSinglePane>
+        }
+    }
+}
+
+def Xform "objSballRef_MarbleTranslucent_21" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, -2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/MarbleTranslucent>
+        }
+    }
+}
+
+def Xform "objSballRef_GlassFrostedMedium_22" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, -2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/GlassFrostedMedium>
+        }
+    }
+}
+
+def Xform "objSballRef_SteelMeshWireSmall_23" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, -2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/SteelMeshWireSmall>
+        }
+    }
+}
+
+def Xform "objSballRef_GlassClouds_24" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, -2000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/GlassClouds>
+        }
+    }
+}
+
+def Xform "objSballRef_AluminumKnurled_25" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, -3000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/AluminumKnurled>
+        }
+    }
+}
+
+def Xform "objSballRef_GraniteRed_26" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-1000, 0, -3000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/GraniteRed>
+        }
+    }
+}
+
+def Xform "objSballRef_GlassClear_27" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (0, 0, -3000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/GlassClear>
+        }
+    }
+}
+
+def Xform "objSballRef_PowderCoatRoughBlue_28" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (1000, 0, -3000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/PowderCoatRoughBlue>
+        }
+    }
+}
+
+def Xform "objSballRef_RubberWeathered_29" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (2000, 0, -3000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/RubberWeathered>
+        }
+    }
+}
+
+def Xform "objSballRef_BronzeInsulating_30" (
+    prepend references = </TestMaterial/Scenes/scene>
+)
+{
+    double3 xformOp:translate = (-2000, 0, -4000)
+    uniform token[] xformOpOrder = ["xformOp:translate"]
+
+    over "Preview_Mesh"
+    {
+        over "submesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </MaterialX/Materials/BronzeInsulating>
+        }
+    }
+}
+
+def Xform "CameraAll"
+{
+    float3 xformOp:rotateXYZ = (-43.5, 37.3, 0)
+    double3 xformOp:translate = (3900, 6300, 5300)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ"]
+
+    def Camera "CameraAll"
+    {
+        float focalLength = 24
+        float focusDistance = 6000
+        float horizontalAperture = 36
+        float verticalAperture = 24
+    }
+}
+
+over "TestMaterial"
+{
+    over "Scenes"
+    {
+        token visibility = "invisible"
+    }
+}
+

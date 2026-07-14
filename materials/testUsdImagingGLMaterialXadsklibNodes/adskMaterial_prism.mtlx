@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<materialx version="1.38">
+  <adsk:metal name="shader_alumeshslot" type="surfaceshader">
+    <input name="metal_f0" type="color3" value="0.959822, 0.96226, 0.965052" colorspace="gamma24" />
+    <input name="surface_albedo" type="color3" value="1, 1, 1" colorspace="gamma24" />
+    <input name="surface_roughness" type="float" value="0.264575" />
+    <input name="surface_anisotropy" type="float" value="0" />
+    <input name="surface_rotation" type="float" value="0" />
+    <input name="surface_normal" type="vector3" output="surface_normal_map_output" nodegraph="alumeshslot_inputGraph" />
+    <input name="surface_cutout" type="color3" output="surface_cutout_map_output" nodegraph="alumeshslot_inputGraph" />
+  </adsk:metal>
+  <nodegraph name="alumeshslot_inputGraph">
+    <adsk:normal_map name="surface_normal_texture" type="vector3">
+      <input name="file" type="filename" value="images/mesh_circular_horizontal_bevel_norm.png" colorspace="lin_rec709" />
+      <input name="realworld_offset" type="vector2" value="0, 0" unit="inch" unittype="distance" />
+      <input name="realworld_scale" type="vector2" value="21.5, 21.5" unit="millimeter" unittype="distance" />
+      <input name="uv_offset" type="vector2" value="0, 0" />
+      <input name="uv_scale" type="vector2" value="1, 1" />
+      <input name="rotation_angle" type="float" value="0" />
+      <input name="normal_scale" type="float" value="1" />
+    </adsk:normal_map>
+    <output name="surface_normal_map_output" type="vector3" nodename="surface_normal_texture" />
+    <adsk:bitmap name="surface_cutout_texture" type="color3">
+      <input name="file" type="filename" value="images/mesh_circular_horizontal_cutout.png" colorspace="srgb_texture" />
+      <input name="realworld_offset" type="vector2" value="0, 0" unit="inch" unittype="distance" />
+      <input name="realworld_scale" type="vector2" value="21.5, 21.5" unit="millimeter" unittype="distance" />
+      <input name="uv_offset" type="vector2" value="0, 0" />
+      <input name="uv_scale" type="vector2" value="1, 1" />
+      <input name="rotation_angle" type="float" value="0" />
+      <input name="rgbamount" type="float" value="1" />
+      <input name="invert" type="boolean" value="false" />
+    </adsk:bitmap>
+    <output name="surface_cutout_map_output" type="color3" nodename="surface_cutout_texture" />
+  </nodegraph>
+  <surfacematerial name="alumeshslot" type="material" uiname="Prism-020">
+    <input name="surfaceshader" type="surfaceshader" nodename="shader_alumeshslot" />
+  </surfacematerial>
+
+  
+  <adsk:metal name="alumglossyblue" type="surfaceshader">
+    <input name="metal_f0" type="color3" value="0.34919, 0.583831, 0.854306" colorspace="gamma24" />
+    <input name="surface_albedo" type="color3" value="1, 1, 1" colorspace="gamma24" />
+    <input name="surface_roughness" type="float" value="0.122474" />
+    <input name="surface_anisotropy" type="float" value="0" />
+    <input name="surface_rotation" type="float" value="0" />
+  </adsk:metal>
+  <surfacematerial name="materialalumglossyblue" type="material" uiname="Prism-029">
+    <input name="surfaceshader" type="surfaceshader" nodename="alumglossyblue" />
+  </surfacematerial>
+
+  <adsk:metal name="annodizedred" type="surfaceshader">
+    <input name="metal_f0" type="color3" value="0.854306, 0.34919, 0.34919" colorspace="gamma24" />
+    <input name="surface_albedo" type="color3" value="1, 1, 1" colorspace="gamma24" />
+    <input name="surface_roughness" type="float" value="0.547723" />
+    <input name="surface_anisotropy" type="float" value="0" />
+    <input name="surface_rotation" type="float" value="0" />
+  </adsk:metal>
+  <surfacematerial name="materialannodizedred" type="material" uiname="Prism-034">
+    <input name="surfaceshader" type="surfaceshader" nodename="annodizedred" />
+  </surfacematerial>
+
+</materialx>

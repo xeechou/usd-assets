@@ -2,3 +2,6 @@
 *.bck.*
 .DS_Store
 *.pyc
+*.zst
+
+materials/Usd-Mtlx-Example
